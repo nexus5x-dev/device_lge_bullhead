@@ -27,7 +27,8 @@ LOCAL_PATH := $(call my-dir)
 
 ifneq ($(filter bullhead, $(TARGET_DEVICE)),)
 
-include $(call all-makefiles-under,$(LOCAL_PATH))
+subdir_makefiles=$(call first-makefiles-under,$(LOCAL_PATH))
+$(foreach mk,$(subdir_makefiles),$(info including $(mk) ...)$(eval include $(mk)))
 
 DM_LIBS := libdmengine.so libdmjavaplugin.so
 DM_SYMLINKS := $(addprefix $(TARGET_OUT)/priv-app/DMService/lib/arm/,$(notdir $(DM_LIBS)))
