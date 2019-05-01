@@ -381,10 +381,12 @@ service msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.
     group root
     writepid /dev/cpuset/system-background/tasks
 
-service charger /charger
+service charger /system/bin/charger
     class charger
-    critical
+    group log system graphics
+    capabilities SYS_BOOT
     seclabel u:r:charger:s0
+    writepid /dev/cpuset/system-background/tasks
 
 service qcamerasvr /vendor/bin/mm-qcamera-daemon
     class main
