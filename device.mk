@@ -379,6 +379,10 @@ PRODUCT_PACKAGES += \
     libshim_sensor \
     libprotobuf_shim
 
+# Soong
+PRODUCT_SOONG_NAMESPACES += \
+    device/lge/bullhead
+
 # System
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.binary_xml=false
