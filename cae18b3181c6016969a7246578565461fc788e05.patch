@@ -1,0 +1,31 @@
+From cae18b3181c6016969a7246578565461fc788e05 Mon Sep 17 00:00:00 2001
+From: Arian <arian.kulmer@web.de>
+Date: Sat, 23 Nov 2019 23:10:24 +0100
+Subject: [PATCH] NB1: Symlink wlan_mac.bin from persist to qca_cld firmware
+
+* qcacld expects wlan_mac.bin at /vendor/firmware/wlan/qca_cld/wlan_mac.bin
+
+Change-Id: I1f887120767310d5634ca78c68f4786476a2373f
+---
+ Android.mk | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+diff --git a/Android.mk b/Android.mk
+index a53a6eccc..8b0885d6d 100644
+--- a/Android.mk
++++ b/Android.mk
+@@ -98,6 +98,13 @@ $(WCNSS_INI_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+ 	@rm -rf $@
+ 	$(hide) ln -sf /vendor/etc/wifi/$(notdir $@) $@
+ 
+-ALL_DEFAULT_INSTALLED_MODULES += $(WCNSS_INI_SYMLINK)
++WCNSS_MAC_SYMLINK := $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld/wlan_mac.bin
++$(WCNSS_MAC_SYMLINK): $(LOCAL_INSTALLED_MODULE)
++	@echo "WCNSS MAC bin link: $@"
++	@mkdir -p $(dir $@)
++	@rm -rf $@
++	$(hide) ln -sf /mnt/vendor/persist/$(notdir $@) $@
++
++ALL_DEFAULT_INSTALLED_MODULES += $(WCNSS_INI_SYMLINK) $(WCNSS_MAC_SYMLINK)
+ 
+ endif

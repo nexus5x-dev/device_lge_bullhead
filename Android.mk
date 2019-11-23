@@ -25,13 +25,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-include $(CLEAR_VARS)
-LOCAL_MODULE := bullhead_wlan_mac
-wlan_mac_path := $(TARGET_OUT_ETC)/firmware/wlan/qca_cld/wlan_mac.bin
-LOCAL_POST_INSTALL_CMD := $(hide) mkdir -p $(dir $(wlan_mac_path)) && ln -sf /persist/wlan_mac.bin $(wlan_mac_path)
-wlan_mac_path :=
-include $(BUILD_PHONY_PACKAGE)
-
 ifneq ($(filter bullhead, $(TARGET_DEVICE)),)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
@@ -54,6 +47,13 @@ $(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /vendor/lib64/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(IMS_SYMLINKS)
+WCNSS_MAC_SYMLINK := $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld/wlan_mac.bin
+$(WCNSS_MAC_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	@echo "WCNSS MAC bin link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /persist/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(IMS_SYMLINKS) $(WCNSS_MAC_SYMLINK)
 
 endif
