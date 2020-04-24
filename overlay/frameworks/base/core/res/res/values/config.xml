@@ -226,28 +226,6 @@
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">4</integer>
 
-    <!-- Wifi driver supports batched scan -->
-    <bool translatable="false" name="config_wifi_batched_scan_supported">true</bool>
-
-    <!-- Boolean indicating whether or not to revert to default country code when cellular
-         radio is unable to find any MCC information to infer wifi country code from -->
-    <bool translatable="false" name="config_wifi_revert_country_code_on_cellular_loss">true</bool>
-
-    <!-- Boolean indicating whether or not wifi should turn off when emergency call is made -->
-    <bool translatable="false" name="config_wifi_turn_off_during_emergency_call">true</bool>
-
-    <!-- Idle Receive current for wifi radio. 0 by default-->
-    <integer translatable="false" name="config_wifi_idle_receive_cur_ma">1</integer>
-
-    <!-- Rx current for wifi radio. 0 by default-->
-    <integer translatable="false" name="config_wifi_active_rx_cur_ma">105</integer>
-
-    <!-- Tx current for wifi radio. 0 by default-->
-    <integer translatable="false" name="config_wifi_tx_cur_ma">235</integer>
-
-    <!-- Operating volatage for wifi radio. 0 by default-->
-    <integer translatable="false" name="config_wifi_operating_voltage_mv">3700</integer>
-
     <!-- Boolean indicating if restoring network selection should be skipped -->
     <!-- The restoring is handled by modem if it is true -->
     <bool translatable="false" name="skip_restoring_network_selection">true</bool>
@@ -391,9 +369,6 @@
         <!-- ID0:Fingerprint:Strong -->
         <item>0:2:15</item>
     </string-array>
-
-    <!-- Whether device supports wifi ap mac randomization -->
-    <bool name="config_wifi_ap_randomization_supported">false</bool>
     
     <!-- Whether to cancel fingerprint operation if not idle -->
     <bool name="config_fpCancelIfNotIdle">true</bool>
