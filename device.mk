@@ -409,6 +409,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     timekeep
 
+# Tethering
+PRODUCT_PACKAGES += \
+    TetheringConfigOverlay
+
 # Thermal HAL
 PRODUCT_PACKAGES += \
     thermal.bullhead
