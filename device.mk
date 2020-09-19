@@ -332,6 +332,7 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils.xml \
     librmnetctl \
     rmnetcli \
+    libaudioclient_shim
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
