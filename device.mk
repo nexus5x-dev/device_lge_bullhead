@@ -347,8 +347,7 @@ PRODUCT_PACKAGES += \
     qti-telephony-utils \
     qti_telephony_utils.xml \
     librmnetctl \
-    rmnetcli \
-    libaudioclient_shim
+    rmnetcli
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
@@ -363,9 +362,14 @@ PRODUCT_PACKAGES += \
     activity_recognition.bullhead \
     android.hardware.sensors@1.0-impl
 
+# Shims
+PRODUCT_PACKAGES += \
+    libaudioclient_shim \
+    libshim_dpmframework
+
 # System
- PRODUCT_PROPERTY_OVERRIDES += \
-     persist.sys.binary_xml=false
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.binary_xml=false
 
 # TimeKeep
 PRODUCT_PACKAGES += \
@@ -373,7 +377,7 @@ PRODUCT_PACKAGES += \
 
 # Thermal HAL
 PRODUCT_PACKAGES += \
-    thermal.bullhead 
+    thermal.bullhead
 
 # VNDK
 PRODUCT_EXTRA_VNDK_VERSIONS := 29
