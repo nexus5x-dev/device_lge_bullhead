@@ -173,8 +173,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service \
-    android.hardware.drm@1.3-service.clearkey \
-    libprotobuf-cpp-lite
+    android.hardware.drm@1.3-service.clearkey
 
 # Dumpstate HAL
 PRODUCT_PACKAGES += \
@@ -378,6 +377,10 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 PRODUCT_EXTRA_VNDK_VERSIONS := 29
+
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v29/arm/arch-arm-armv7-a-neon/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-lite-v29.so \
+    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-lite-v29.so
 
 # VTS {Library used for VTS profiling (only for userdebug and eng builds)}
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
