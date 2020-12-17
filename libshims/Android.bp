@@ -23,3 +23,10 @@ cc_library_shared {
     name: "libshim_sensor",
     vendor: true,
 }
+
+cc_library_shared {
+    srcs: ["libprotobuf_shim.cpp"],
+    shared_libs: ["liblog"],
+    name: "libprotobuf_shim",
+    vendor: true,
+}
