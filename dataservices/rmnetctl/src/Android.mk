@@ -1,9 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_COPY_HEADERS_TO   := dataservices/rmnetctl
-LOCAL_COPY_HEADERS      := ../inc/librmnetctl.h
-
 LOCAL_SRC_FILES := librmnetctl.c
 LOCAL_CFLAGS := -Wall -Werror
 
