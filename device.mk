@@ -363,6 +363,10 @@ PRODUCT_PACKAGES += \
     activity_recognition.bullhead \
     android.hardware.sensors@1.0-impl
 
+# System
+ PRODUCT_PROPERTY_OVERRIDES += \
+     persist.sys.binary_xml=false
+
 # TimeKeep
 PRODUCT_PACKAGES += \
     timekeep
