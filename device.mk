@@ -365,7 +365,8 @@ PRODUCT_PACKAGES += \
 # Shims
 PRODUCT_PACKAGES += \
     libaudioclient_shim \
-    libshim_dpmframework
+    libshim_dpmframework \
+    libshim_sensor
 
 # System
 PRODUCT_PROPERTY_OVERRIDES += \

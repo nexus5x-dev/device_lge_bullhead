@@ -187,7 +187,9 @@ TARGET_USES_CHINOOK_SENSORHUB := false
 TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib64/libril-qc-qmi-1.so|libaudioclient_shim.so \
     /vendor/bin/ATFWD-daemon|libshim_dpmframework.so \
-    /vendor/lib64/libcne.so|libshim_dpmframework.so
+    /vendor/lib64/libcne.so|libshim_dpmframework.so \
+    /vendor/lib/liboemcamera.so|libshim_sensor.so \
+    /vendor/bin/slim_daemon|libshim_sensor.so
 
 # Testing related defines
 BOARD_PERFSETUP_SCRIPT := platform_testing/scripts/perf-setup/bullhead-setup.sh

@@ -13,3 +13,13 @@ cc_library {
     ],
     vendor: true,
 }
+
+cc_library_shared {
+    srcs: ["sensor.cpp"],
+    shared_libs: [
+	"libsensor",
+	"libutils"
+    ],
+    name: "libshim_sensor",
+    vendor: true,
+}
