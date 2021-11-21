@@ -376,10 +376,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     thermal.bullhead 
 
-# VNDK-SP
-PRODUCT_PACKAGES += \
-    vndk-sp
-
 # VTS {Library used for VTS profiling (only for userdebug and eng builds)}
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_PACKAGES += \
