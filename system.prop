@@ -24,6 +24,9 @@ ro.audio.flinger_standbytime_ms=300
 qcom.bluetooth.soc=rome
 bluetooth.enable_timeout_ms=12000
 
+# BPF
+ro.kernel.ebpf.supported=false
+
 # Camera
 persist.camera.eis.enable=1
 persist.camera.is_type=4
