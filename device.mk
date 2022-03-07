@@ -274,8 +274,10 @@ PRODUCT_COPY_FILES += \
 
 # Light HAL
 PRODUCT_PACKAGES += \
+    lights.bullhead \
     lights.vts \
-    android.hardware.lights-service.bullhead
+    android.hardware.light@2.0-impl \
+    android.hardware.light@2.0-service
 
 # MBN
 PRODUCT_COPY_FILES += \
