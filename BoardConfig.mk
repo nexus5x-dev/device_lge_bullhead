@@ -18,6 +18,7 @@ DEVICE_PATH := device/lge/bullhead
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+RELAX_USES_LIBRARY_CHECK := true
 
 # Architecture
 TARGET_ARCH := arm64
