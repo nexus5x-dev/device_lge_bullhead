@@ -165,6 +165,9 @@ TARGET_RECOVERY_FSTAB = $(DEVICE_PATH)/rootdir/etc/fstab.bullhead
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
+# Security patch level
+VENDOR_SECURITY_PATCH := 2018-12-05
+
 # SELinux
 BOARD_SEPOLICY_DIRS += \
     $(DEVICE_PATH)/sepolicy
