@@ -365,9 +365,26 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Sensor & activity_recognition HAL
 PRODUCT_PACKAGES += \
-    sensortool.bullhead \
+    sensors.bullhead \
     activity_recognition.bullhead \
-    android.hardware.sensors@1.0-impl
+    android.hardware.sensors@1.0-impl \
+    android.hardware.contexthub@1.0-impl.nanohub \
+    android.hardware.contexthub@1.0-service
+
+ifeq ($(TARGET_USES_CHINOOK_SENSORHUB),true)
+PRODUCT_PACKAGES += \
+    sensortool.bullhead
+else
+PRODUCT_PACKAGES += \
+    nanoapp_cmd
+endif
+
+# Sensor utilities (only for userdebug and eng builds)
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+PRODUCT_PACKAGES += \
+    nanotool \
+    sensortest
+endif
 
 # Shims
 PRODUCT_PACKAGES += \
