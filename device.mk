@@ -98,7 +98,6 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     audio.r_submix.default \
     libaudio-resampler \
-    dsm_ctrl \
     libqcomvoiceprocessing \
     libqcomvoiceprocessingdescriptors \
     libqcomvisualizer \
@@ -134,9 +133,7 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8992 \
-    libcamera \
     libmmcamera_interface \
-    libmmcamera_interface2 \
     libmmjpeg_interface \
     libqomx_core \
     mm-qcamera-app \
@@ -146,8 +143,7 @@ PRODUCT_PACKAGES += \
     camera.device@3.2-impl
 
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.camera.device@1.0 \
-    vendor.qti.hardware.camera.device@1.0_vendor
+    vendor.qti.hardware.camera.device@1.0
 
 # ConfigStore
 PRODUCT_PACKAGES += \
@@ -158,12 +154,9 @@ PRODUCT_PACKAGES += \
     gralloc.msm8992 \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl \
-    android.hardware.graphics.mapper@2.0-service \
     hwcomposer.msm8992 \
-    libgenlock \
     memtrack.msm8992 \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service
@@ -190,7 +183,6 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint HIDL implementation
 PRODUCT_PACKAGES += \
-    fingerprint.bullhead \
     android.hardware.biometrics.fingerprint@2.1-service
 
 # For android_filesystem_config.h
@@ -214,8 +206,6 @@ PRODUCT_PACKAGES += \
 # GPS
 PRODUCT_PACKAGES += \
     libgps.utils \
-    libgnss \
-    liblocation_api \
     gps.msm8992
 
 PRODUCT_COPY_FILES += \
@@ -230,9 +220,7 @@ PRODUCT_PACKAGES += \
 # HIDL
 PRODUCT_PACKAGES += \
     libhidltransport \
-    libhidltransport.vendor \
-    libhwbinder \
-    libhwbinder.vendor
+    libhwbinder
 
 # IMS
 PRODUCT_PACKAGES += \
@@ -292,7 +280,6 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libmm-omxcore \
     libOmxVdec \
-    libOmxVdecHevc \
     libOmxVenc
 
 PRODUCT_COPY_FILES += \
@@ -367,7 +354,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # Sensor & activity_recognition HAL
 PRODUCT_PACKAGES += \
     sensors.bullhead \
-    activity_recognition.bullhead \
     android.hardware.sensors@1.0-impl \
     android.hardware.contexthub@1.0-impl.nanohub \
     android.hardware.contexthub@1.0-service
@@ -442,7 +428,6 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     hostapd \
     wificond \
-    wifilogd \
     wpa_supplicant \
     wpa_supplicant.conf \
     bullhead_wlan_mac
