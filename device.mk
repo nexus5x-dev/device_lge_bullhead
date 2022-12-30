@@ -94,7 +94,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0 \
     android.hardware.audio.effect@6.0-impl \
     audio.primary.msm8992 \
-    audio.a2dp.default \
     audio.usb.default \
     audio.r_submix.default \
     libaudio-resampler \
