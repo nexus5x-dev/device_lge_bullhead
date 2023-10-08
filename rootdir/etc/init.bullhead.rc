@@ -415,6 +415,7 @@ service cnd /vendor/bin/cnd
     class late_start
     socket cnd stream 660 root inet
     group root wakelock
+    disabled
 
 service imsqmidaemon /vendor/bin/imsqmidaemon
     class main
