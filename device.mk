@@ -358,6 +358,9 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.radio.snapshot_enabled=1 \
     persist.radio.snapshot_timer=10
 
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v33.so
+
 # Sensor & activity_recognition HAL
 PRODUCT_PACKAGES += \
     sensors.bullhead \
