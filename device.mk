@@ -267,7 +267,6 @@ PRODUCT_COPY_FILES += \
 # Light HAL
 PRODUCT_PACKAGES += \
     lights.bullhead \
-    lights.vts \
     android.hardware.light@2.0-impl \
     android.hardware.light@2.0-service
 
@@ -416,13 +415,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vndk.version=current
-
-# VTS {Library used for VTS profiling (only for userdebug and eng builds)}
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-PRODUCT_PACKAGES += \
-    libvts_profiling \
-    libvts_multidevice_proto
-endif
 
 # USB HAL
 PRODUCT_PACKAGES += \
