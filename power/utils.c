@@ -40,7 +40,7 @@
 #include "power-common.h"
 
 #define LOG_TAG "QCOMPowerHAL"
-#include <utils/Log.h>
+#include <log/log.h>
 
 //#define INTERACTION_BOOST
 
