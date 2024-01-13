@@ -90,6 +90,8 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@6.0 \
     android.hardware.audio@6.0-impl \
     android.hardware.soundtrigger@2.0-impl \
+    android.hardware.soundtrigger@2.0 \
+    android.hardware.soundtrigger@2.0-core \
     android.hardware.audio.effect@2.0-impl \
     android.hardware.audio.effect@6.0 \
     android.hardware.audio.effect@6.0-impl \
@@ -136,6 +138,8 @@ PRODUCT_PACKAGES += \
     libmmcamera_interface \
     libmmjpeg_interface \
     libqomx_core \
+    libyuv \
+    libexif \
     mm-qcamera-app \
     android.hardware.camera.provider@2.4-impl:32 \
     android.hardware.camera.provider@2.4-service \
