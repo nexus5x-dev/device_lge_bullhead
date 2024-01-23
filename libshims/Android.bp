@@ -2,7 +2,6 @@ cc_library_shared {
     srcs: ["libaudioclient_shim.cpp"],
     name: "libaudioclient_shim",
     shared_libs: ["libaudioclient"],
-    vendor: true,
 }
 
 cc_library {
@@ -18,10 +17,10 @@ cc_library_shared {
     srcs: ["sensor.cpp"],
     shared_libs: [
 	"libsensor",
+	"libhardware",
 	"libutils"
     ],
     name: "libshim_sensor",
-    vendor: true,
 }
 
 cc_library_shared {

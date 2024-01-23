@@ -2,7 +2,7 @@
 // Copyright (C) Lunarixus 2020
 
 #include <string>
-#include <cutils/log.h>
+#include <log/log.h>
 
 #define LOG_TAG "libprotobuf_shim"
 
