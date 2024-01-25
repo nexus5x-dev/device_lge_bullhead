@@ -388,7 +388,8 @@ PRODUCT_PACKAGES += \
     libaudioclient_shim \
     libshim_dpmframework \
     libshim_sensor \
-    libprotobuf_shim
+    libprotobuf_shim \
+    libc_mutexdestroy_shim
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm/arch-arm-armv7-a-neon/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-lite-v29.so \
