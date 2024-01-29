@@ -24,6 +24,7 @@ ro.audio.flinger_standbytime_ms=300
 qcom.bluetooth.soc=rome
 bluetooth.enable_timeout_ms=12000
 ro.boot.btmacaddr=00:00:00:00:00:00
+persist.sys.bt.max_vendor_cap=0
 
 # BPF
 ro.kernel.ebpf.supported=false
