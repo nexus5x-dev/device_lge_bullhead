@@ -24,6 +24,7 @@ ro.audio.flinger_standbytime_ms=300
 qcom.bluetooth.soc=rome
 bluetooth.enable_timeout_ms=12000
 ro.boot.btmacaddr=00:00:00:00:00:00
+ro.bt.bdaddr_path=/persist/bdaddr.txt
 persist.sys.bt.max_vendor_cap=0
 bluetooth.device.class_of_device=90,2,12
 bluetooth.profile.asha.central.enabled?=true
