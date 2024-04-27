@@ -345,6 +345,7 @@ PRODUCT_PACKAGES += \
 
 # Ril
 PRODUCT_PACKAGES += \
+    android.hardware.radio@1.4-service.legacy \
     telephony-ext \
     qti-telephony-hidl-wrapper \
     qti_telephony_hidl_wrapper.xml \
