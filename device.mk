@@ -201,7 +201,8 @@ PRODUCT_PACKAGES += \
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
-    android.hardware.gatekeeper@1.0-service
+    android.hardware.gatekeeper@1.0-service \
+    libion.vendor
 
 # General support
 PRODUCT_PACKAGES += \
@@ -228,6 +229,7 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
+    libhidlmemory.vendor \
     libhidltransport \
     libhwbinder
 
@@ -352,7 +354,10 @@ PRODUCT_PACKAGES += \
     qti-telephony-utils \
     qti_telephony_utils.xml \
     librmnetctl \
-    rmnetcli
+    rmnetcli \
+    libnetutils.vendor \
+    libsqlite.vendor \
+    libsysutils.vendor
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
