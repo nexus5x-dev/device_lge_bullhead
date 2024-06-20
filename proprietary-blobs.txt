@@ -97,3 +97,4 @@
 /system/lib/libiperf.so
 /system/xbin/iperf3
 /IMAGES/vendor.img
+vendor/lib64/libcld80211.so|8a4c2c19a1cc5f1b54432ed500fe93fdecb4dc32
