@@ -405,8 +405,7 @@ PRODUCT_COPY_FILES += \
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
-    device/lge/bullhead \
-    vendor/qcom/opensource/dataservices
+    device/lge/bullhead
 
 # System
 PRODUCT_PROPERTY_OVERRIDES += \
