@@ -51,6 +51,7 @@ bluetooth.profile.vcp.controller.enabled?=true
 
 # BPF
 ro.kernel.ebpf.supported=false
+bpf.progs_loaded=1
 
 # Camera
 persist.camera.eis.enable=1
