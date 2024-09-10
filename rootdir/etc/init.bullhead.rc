@@ -28,10 +28,6 @@ on early-init
     chmod 0755 /sys/kernel/debug
     chown system system /sys/kernel/debug/kgsl/proc
 
-    start qseecomd
-    # Busy loop to wait for qseecomd started
-    # exec - root root system -- /vendor/bin/init.bullhead.qseecomd.sh
-
 on charger
     # disable FPS clk
     write /sys/bus/spi/drivers/fpc1020/spi1.2/clk_enable 0
@@ -96,6 +92,8 @@ on fs
     write /sys/kernel/boot_adsp/boot 1
     chown root audio /sys/kernel/boot_adsp/boot
     setprop sys.qcom.devup 1
+
+    start qseecomd
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
