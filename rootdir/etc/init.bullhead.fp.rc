@@ -19,5 +19,5 @@ on boot
     chmod 660 /dev/fpc1020
 
 on post-fs-data
-    mkdir /data/fpc_tpl 770 system system
+    mkdir /data/fpc_tpl 0770 system system
     mkdir /data/fpc 0770 system system
