@@ -328,10 +328,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.bullhead.power.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.bullhead.power.sh
 
-# Qseecomd configuration file
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/init.bullhead.qseecomd.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.bullhead.qseecomd.sh
-
 # RenderScript HAL
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
