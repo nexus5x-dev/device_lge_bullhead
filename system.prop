@@ -121,9 +121,6 @@ persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
 
-# Ramdump
-persist.service.ramdump.enable=1
-
 # RIL
 ro.vendor.extension_library=libqti-perfd-client.so
 vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
